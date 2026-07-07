@@ -7,12 +7,12 @@ RUN apt-get update && \
     rm -rf /var/www/html/index.html
 
 
-ADD https://templatemo.com/download/templatemo_623_novapay  /var/www/html/templatemo_623_novapay.zip
+ADD https://templatemo.com/download/templatemo_626_ledger_slideshow   /var/www/html/templatemo_626_ledger_slideshow.zip
 
 WORKDIR /var/www/html
 
-RUN unzip templatemo_623_novapay.zip && \
-    mv templatemo_623_novapay/* /var/www/html/
+RUN unzip templatemo_626_ledger_slideshow.zip && \
+    mv templatemo_626_ledger_slideshow /* /var/www/html/
     
 EXPOSE 80
 
