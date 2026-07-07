@@ -1,21 +1,3 @@
-FROM ubuntu:latest
 
-LABEL dev="Vishwajeet"
-
-RUN apt-get update && \
-    apt-get install apache2 unzip -y && \
-    rm -rf /var/www/html/index.html
-
-
-ADD https://templatemo.com/download/templatemo_623_novapay /var/www/htmltemplatemo_623_novapay.zip
-
-WORKDIR /var/www/html
-
-RUN unzip templatemo_623_novapay.zip && \
-    mv templatemo_623_novapay/* /var/www/html/
-    
-EXPOSE 80
-
-CMD ["apache2ctl", "-D", "FOREGROUND"]
 
 
