@@ -14,6 +14,6 @@ WORKDIR /var/www/html
 RUN unzip templatemo_626_ledger_slideshow.zip && \
     mv templatemo_626_ledger_slideshow /* /var/www/html/
     
-EXPOSE 80
+EXPOSE 81
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
