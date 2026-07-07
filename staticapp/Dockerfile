@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/www/html/index.html
 
 
-ADD https://templatemo.com/download/templatemo_623_novapay /var/www/htmltemplatemo_623_novapay.zip
+ADD https://templatemo.com/download/templatemo_623_novapay /var/www/html/templatemo_623_novapay.zip
 
 WORKDIR /var/www/html
 
