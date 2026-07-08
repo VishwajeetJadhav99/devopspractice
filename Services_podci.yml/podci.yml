@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: cipod
+    labels:
+       app: cipod
+spec:
+  containers:
+     - image: nginxpod
+       ports:
+          - containers
