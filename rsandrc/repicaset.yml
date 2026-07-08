@@ -16,10 +16,10 @@ spec:
               app: nginxpodrs
       spec:
          containers:
-             - image: nginx:latest
+             - name: nginxcontainer
+               image: nginx:latest
                ports:
                 - containerPort: 80
-                  name: nginxcont
-
+                  
 
 
