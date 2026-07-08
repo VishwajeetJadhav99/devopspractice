@@ -15,7 +15,7 @@ spec:
               app: nginxpodrc
       spec:
          containers:
-             - name:
+             - name: nginxpod
               image: nginx:latest
               ports:
                 - containerPort: 80
