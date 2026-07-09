@@ -9,7 +9,7 @@ spec:
    containers:
        - image: nginx:latest
          ports: 
-           - containerport: 80
+           - containerPort: 80
          name: nginxcont
 
 ---
@@ -24,7 +24,7 @@ spec:
   type: ClusterIP
   ports:
     - port: 80
-      targetport: 80
+      targetPort: 80
 
 protocol: TCP
          
