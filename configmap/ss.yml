@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+    name: ssdb9
+    labels:
+       app: ssdb9
+spec:
+   replicas: 1
+   selector:
+       matchLabels:
+         app: ssdb9
+   template:
+       metadata:
+          name: ssdb9
+          labels:
+             app: ssdb9
+       spec:
+         containers:
+          - name: ssdb9
+            image: mysql:latest
+            ports:
+             - containerPort: 3306
+               protocol: TCP
+            env:
+             - name: MYSQL_ROOT_PASSWORD
+               valueFrom: 
+                 secretKeyRef:
+                        name: ssdb-secret
+                        key: root_pw 
