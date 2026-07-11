@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: configMap
 metadata:
-   name: ssdb-config
+   name: ssdb9-config
    labels:
-     app: ssdb-config
+     app: ssdb9-config
 data:
   root_pw9: "123456"

@@ -25,5 +25,5 @@ spec:
              - name: MYSQL_ROOT_PASSWORD
                valueFrom: 
                  configMapKeyRef:
-                        name: ssdb-config
+                        name: ssdb9-config
                         key: root_pw9 
