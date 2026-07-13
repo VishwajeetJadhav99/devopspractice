@@ -1,0 +1,10 @@
+services: 
+     staticapp:
+         build:  .
+         ports:
+              - "80:80"
+         container_name: staticwebserver
+         volumes:
+            - ./var/www/index.html
+         network_mode: "host"
+                  
