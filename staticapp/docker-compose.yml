@@ -4,7 +4,7 @@ services:
          ports:
               - "80:80"
          container_name: staticwebserver
-         volumes:
+       #  volumes:
             - ./var/www/index.html
          network_mode: "host"
                   
