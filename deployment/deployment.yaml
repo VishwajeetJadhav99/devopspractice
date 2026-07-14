@@ -10,7 +10,7 @@ spec:
       matchLabels:
           app: mederp
    strategy:
-     type: Rollingupdate
+     Type: RollingUpdate
      rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
