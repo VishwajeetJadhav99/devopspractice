@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+     name: awagent
+     labels:
+        app: awagent
+spec:
+   selector:
+      matchLabels:
+         app: awagent
+   template:
+     metadata:
+      name: awagent
+      labels:
+        app: awagent
+     spec:
+       containers:
+         - name: awagent
+           image: amazon/cloudwatch-agent
+           ports:
+            - containerPort: 80
+
+               
