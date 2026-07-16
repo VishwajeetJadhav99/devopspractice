@@ -37,7 +37,7 @@ spec:
 
 ---
 apiVersion: autoscaling/v2
-kind: HorizintoalPodAutoscaler
+kind: HorizontalPodAutoscaler
 metadata:
   name: hpa
   labels:
