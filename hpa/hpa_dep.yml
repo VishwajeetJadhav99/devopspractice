@@ -52,9 +52,9 @@ spec:
   metrics:
      - type: Resource
        resource:
-         name: cpu
-         target:
-          type: Utilization
-         average: 10 
+           name: cpu
+           target:
+             type: Utilization
+             average: 10 
 
       
