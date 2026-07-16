@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: mederp
+   labels:
+      app: mederp
+spec:
+   replicas: 4
+   selector:
+      matchLabels:
+          app: mederp
+   strategy:
+     type: RollingUpdate
+     rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+   template:
+       metadata:
+           name: mederp
+           labels:
+             app: mederp
+       spec:
+         containers:
+          - name: mederp
+            image: httpd
+            ports:
+               - name: http
+                 containerPort: 80
+                 protocol: TCP
+            resources:
+              requests:
+                cpu: "100m"
+                memory: "256Mi"
+              limits:
+                cpu: "500m"
+                memory: "512Mi" 
+
+---
+apiVersion: autoscaling/v2
+kind: HorizintoalPodAutoscaler
+metadata:
+  name: hpa
+  labels:
+    app: hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: mederp
+  minReplicas: 1
+  maxReplicass: 2
+  metrics:
+     - type: Resource
+       resource:
+         name: cpu
+         target:
+          type: Utilization
+          average: 10 
+
+      
