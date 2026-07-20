@@ -15,9 +15,9 @@ spec:
          - containerPort: 80
            name: nginxcont
 
-   volumeMounts:
-     - name: mypd
-       mountPath: "/etc/passwd"
+        volumeMounts:
+        - name: mypd
+          mountPath: "/etc/passwd"
       
    
    
