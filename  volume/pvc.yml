@@ -5,10 +5,10 @@ metadata:
   labels:
     app: pv-claim
 spec:
-  storageclass: standard
+  storageClassName: standard
   volumeMode: Filesystem
-  acessMode:
-    -ReadWriteOnce
+  acessModes:
+    - ReadWriteOnce
   resources:
     requests:
       storage: 10Gi

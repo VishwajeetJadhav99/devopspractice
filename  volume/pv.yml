@@ -5,14 +5,14 @@ metadata:
   labels:
     type: pv
 spec:
-  storageclass: standard
+  storageClassName: standard
   volumeMode: Filesystem
-  acessMode:
-    -ReadWriteOnce
+  acessModes:
+    - ReadWriteOnce
   resources:
   capacity:
      storage: 10Gi
-  PersistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Recycle
   hostPath:
      path: "/mnt/data"
   
