@@ -7,9 +7,9 @@ metadata:
 spec:
   storageClassName: standard
   volumeMode: Filesystem
-  acessModes:
+  accessModes:
     - ReadWriteOnce
-  resources:
+  
   capacity:
      storage: 10Gi
   persistentVolumeReclaimPolicy: Recycle
