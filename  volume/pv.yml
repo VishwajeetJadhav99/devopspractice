@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-volume
+  labels:
+    type: pv
+spec:
+  storageclass: standard
+  volumeMode: Filesystem
+  acessMode:
+    -ReadWriteOnce
+  resources:
+  capacity:
+     storage: 10Gi
+  PersistentVolumeReclaimPolicy: Recycle
+  hostPath:
+     path: "/mnt/data"
+  
+
+  

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginxpod
+spec:
+   volumes:
+      - name: mypd
+        persistentVolumeClaim:
+          claimName: pvcalaim 
+        
+       
+   containers:
+      - image: nginx:latest
+        ports:
+         - containerPort: 80
+           name: nginxcont
+
+   volumeMounts:
+     - mountPath: "/etc/paswd"
+         name: mypd
+   
+   
+    
